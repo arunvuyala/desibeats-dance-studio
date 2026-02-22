@@ -14,7 +14,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" style={{
-      padding: '8rem 2rem',
+      padding: '0 2rem 8rem',
       background: 'linear-gradient(180deg, #111125, #0d0d1a)',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

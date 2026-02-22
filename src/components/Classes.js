@@ -59,7 +59,7 @@ export default function Classes() {
 
   return (
     <section id="classes" style={{
-      padding: '8rem 2rem',
+      padding: '8rem 2rem 0',
       background: 'linear-gradient(180deg, #0d0d1a, #111125)',
       position: 'relative',
     }}>
