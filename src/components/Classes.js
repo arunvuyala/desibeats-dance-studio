@@ -7,7 +7,7 @@ const classes = [
     badge: '⭐',
     color: '#c9a84c',
     description: 'Our youngest dancers discover the joy of movement through playful Bollywood routines and cultural storytelling. Focus on coordination, rhythm, and fun!',
-    includes: ['Basic Bollywood moves', 'Rhythm & coordination', 'Fun & confidence building', 'Annual showcase performance'],
+    includes: ['Basic Bollywood moves', 'Rhythm & coordination', 'Fun & confidence building', 'Stage performance prep'],
     schedule: [
       { day: 'Monday', time: '5:30 – 6:30 pm', status: 'full' },
       { day: 'Thursday', time: '5:30 – 6:30 pm', status: 'open' },
@@ -173,16 +173,30 @@ export default function Classes() {
                 ))}
               </ul>
 
-              {/* Schedule */}
+              {/* Fee + Schedule */}
               <div style={{
                 marginTop: 'auto',
                 borderTop: `1px solid ${cls.color}25`,
                 paddingTop: '1.25rem',
               }}>
                 <div style={{
-                  fontSize: '0.65rem', letterSpacing: '2px', textTransform: 'uppercase',
-                  color: cls.color, fontWeight: '700', marginBottom: '0.75rem',
-                }}>🕐 Schedule</div>
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  marginBottom: '1rem',
+                }}>
+                  <div style={{
+                    fontSize: '0.65rem', letterSpacing: '2px', textTransform: 'uppercase',
+                    color: cls.color, fontWeight: '700',
+                  }}>🕐 Schedule</div>
+                  <div style={{
+                    background: `linear-gradient(135deg, ${cls.color}20, ${cls.color}10)`,
+                    border: `1px solid ${cls.color}40`,
+                    borderRadius: '3px', padding: '4px 12px',
+                    display: 'flex', alignItems: 'baseline', gap: '3px',
+                  }}>
+                    <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: '700', color: cls.color }}>$60</span>
+                    <span style={{ fontSize: '0.65rem', color: 'rgba(248,244,238,0.5)', letterSpacing: '1px' }}>/month</span>
+                  </div>
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   {cls.schedule.map((slot, i) => (
                     <div key={i} style={{
