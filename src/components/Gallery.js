@@ -117,41 +117,65 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Instagram CTA */}
+        {/* Instagram CTA with QR Code */}
         <div style={{
           marginTop: '4rem',
-          padding: '2rem',
+          padding: '2.5rem',
           border: '1px solid rgba(56,178,200,0.2)',
           borderRadius: '6px',
           background: 'rgba(56,178,200,0.04)',
           textAlign: 'center',
         }}>
-          <p style={{ color: 'rgba(248,244,238,0.7)', marginBottom: '1rem', fontSize: '0.95rem' }}>
+          <p style={{ color: 'rgba(248,244,238,0.7)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
             Follow us for class updates, performance clips & behind-the-scenes moments
           </p>
-          <a
-            href="https://www.instagram.com/desi_beats_by_shravani"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
-              color: '#fff',
-              padding: '12px 28px',
-              borderRadius: '4px',
-              fontWeight: '700',
-              fontSize: '0.85rem',
-              letterSpacing: '1.5px',
-              textDecoration: 'none',
-              transition: 'transform 0.2s, box-shadow 0.2s',
-            }}
-            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(253,29,29,0.3)'; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
-          >
-            📸 @desi_beats_by_shravani
-          </a>
+
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+            {/* QR Code */}
+            <div style={{ textAlign: 'center' }}>
+              <img
+                src="/qrcode.jpg"
+                alt="Scan to follow @desi_beats_by_shravani on Instagram"
+                style={{
+                  width: '160px',
+                  height: '160px',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.4)',
+                }}
+              />
+              <p style={{ color: '#9a9aaa', fontSize: '0.75rem', letterSpacing: '1px', marginTop: '0.75rem', textTransform: 'uppercase' }}>
+                Scan to Follow
+              </p>
+            </div>
+
+            {/* Instagram button */}
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ color: 'rgba(248,244,238,0.5)', fontSize: '0.85rem', marginBottom: '1rem' }}>or tap below</p>
+              <a
+                href="https://www.instagram.com/desi_beats_by_shravani"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.75rem',
+                  background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
+                  color: '#fff',
+                  padding: '14px 32px',
+                  borderRadius: '4px',
+                  fontWeight: '700',
+                  fontSize: '0.9rem',
+                  letterSpacing: '1.5px',
+                  textDecoration: 'none',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(253,29,29,0.3)'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+              >
+                📸 @desi_beats_by_shravani
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

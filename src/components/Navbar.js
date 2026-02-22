@@ -121,10 +121,9 @@ export default function Navbar() {
     <>
       <nav style={{ ...styles.nav, ...(scrolled ? styles.navScrolled : {}) }}>
         <div>
-          <span style={styles.logo}>
-            DesiBeats
-            <span style={styles.logoSub}>Sravani & Chandu</span>
-          </span>
+          <a href="#home">
+            <img src="/logo.jpg" alt="DesiBeats" style={{ height: '52px', width: 'auto', display: 'block' }} />
+          </a>
         </div>
 
         {!isMobile && (

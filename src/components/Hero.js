@@ -77,20 +77,17 @@ export default function Hero() {
         position: 'relative',
         zIndex: 2,
       }}>
-        {/* Logo-style mark */}
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '80px',
-          height: '80px',
-          borderRadius: '50%',
-          border: '2px solid rgba(201,168,76,0.5)',
-          marginBottom: '2rem',
-          animation: 'float 4s ease-in-out infinite, pulse-glow 3s ease-in-out infinite',
-          fontSize: '2.5rem',
-        }}>
-          🕺
+        {/* Real Logo */}
+        <div style={{ marginBottom: '2rem', animation: 'float 4s ease-in-out infinite' }}>
+          <img
+            src="/logo.jpg"
+            alt="DesiBeats Logo"
+            style={{
+              height: '160px',
+              width: 'auto',
+              filter: 'drop-shadow(0 0 30px rgba(201,168,76,0.4))',
+            }}
+          />
         </div>
 
         <div style={{
