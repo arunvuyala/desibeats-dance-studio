@@ -105,7 +105,7 @@ export default function About() {
             lineHeight: 1.9,
             fontWeight: '300',
           }}>
-            DesiBeats Dance Studio, founded by Sravani, is a vibrant celebration of Indian dance culture in the heart of Leander, Texas. We believe dance is more than movement — it's a language that connects generations, preserves heritage, and transforms lives.
+            DesiBeats, founded by Sravani, is a vibrant celebration of Indian dance culture in the heart of Leander, Texas. We believe dance is more than movement — it's a language that connects generations, preserves heritage, and transforms lives.
           </p>
         </div>
 

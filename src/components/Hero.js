@@ -90,18 +90,6 @@ export default function Hero() {
           />
         </div>
 
-        <div style={{
-          fontSize: '0.75rem',
-          letterSpacing: '6px',
-          color: '#c9a84c',
-          textTransform: 'uppercase',
-          marginBottom: '1rem',
-          fontFamily: "'Raleway', sans-serif",
-          fontWeight: '600',
-        }}>
-          By Sravani
-        </div>
-
         <h1 style={{
           fontFamily: "'Cinzel Decorative', serif",
           fontSize: 'clamp(3rem, 10vw, 7rem)',
@@ -117,17 +105,6 @@ export default function Hero() {
         }}>
           DesiBeats
         </h1>
-
-        <div style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 'clamp(1rem, 3vw, 1.6rem)',
-          fontStyle: 'italic',
-          color: '#38b2c8',
-          marginBottom: '1.5rem',
-          letterSpacing: '2px',
-        }}>
-          Dance Studio
-        </div>
 
         <p style={{
           fontFamily: "'Raleway', sans-serif",

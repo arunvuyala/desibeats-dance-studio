@@ -29,7 +29,6 @@ export default function Footer() {
               backgroundClip: 'text',
               marginBottom: '0.25rem',
             }}>DesiBeats</div>
-            <div style={{ color: '#9a9aaa', fontSize: '0.75rem', letterSpacing: '3px', textTransform: 'uppercase' }}>Dance Studio • By Sravani</div>
           </div>
 
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
@@ -98,7 +97,7 @@ export default function Footer() {
           fontSize: '0.75rem',
           letterSpacing: '1px',
         }}>
-          © {new Date().getFullYear()} DesiBeats Dance Studio. All rights reserved.
+          © {new Date().getFullYear()} DesiBeats. All rights reserved.
         </div>
       </div>
     </footer>

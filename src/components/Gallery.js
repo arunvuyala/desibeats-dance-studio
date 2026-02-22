@@ -4,7 +4,6 @@ const galleryItems = [
   { emoji: '💃', title: 'Bollywood Showcase', desc: 'Annual performance night' },
   { emoji: '🎬', title: 'Tollywood Grooves', desc: 'Telugu film dance styles' },
   { emoji: '🎭', title: 'Festival Performances', desc: 'Community celebrations' },
-  { emoji: '⭐', title: 'Little Stars Recital', desc: 'Our youngest performers' },
   { emoji: '🔥', title: 'Bolly Beats Fitness', desc: 'Dance your way to fitness' },
   { emoji: '💫', title: 'Competition Ready', desc: 'Stage-ready dancers' },
 ];
