@@ -1,13 +1,11 @@
 import React from 'react';
 
-const danceEmojis = ['💃', '🕺', '🎭', '🌟', '✨', '🎵', '🎶', '💫', '🌺', '🎊'];
-
 const galleryItems = [
   { emoji: '💃', title: 'Bollywood Showcase', desc: 'Annual performance night' },
-  { emoji: '🌺', title: 'Classical Bharatanatyam', desc: 'Traditional Indian dance' },
+  { emoji: '🎬', title: 'Tollywood Grooves', desc: 'Telugu film dance styles' },
   { emoji: '🎭', title: 'Festival Performances', desc: 'Community celebrations' },
-  { emoji: '🌟', title: 'Little Stars Recital', desc: 'Our youngest performers' },
-  { emoji: '🎵', title: 'Fusion Choreography', desc: 'Modern meets traditional' },
+  { emoji: '⭐', title: 'Little Stars Recital', desc: 'Our youngest performers' },
+  { emoji: '🔥', title: 'Bolly Beats Fitness', desc: 'Dance your way to fitness' },
   { emoji: '💫', title: 'Competition Ready', desc: 'Stage-ready dancers' },
 ];
 
@@ -27,7 +25,7 @@ export default function Gallery() {
             fontWeight: '600',
             display: 'block',
             marginBottom: '1rem',
-          }}>Our Moments</span>
+          }}>Gallery</span>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
@@ -44,7 +42,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Photo montage hero card */}
+        {/* Quote card */}
         <div style={{
           padding: '3rem',
           border: '1px solid rgba(201,168,76,0.2)',
@@ -74,7 +72,7 @@ export default function Gallery() {
               "Our students don't just learn dance — they discover their confidence, culture, and community."
             </p>
             <p style={{ color: '#c9a84c', fontSize: '0.85rem', letterSpacing: '2px', fontWeight: '600' }}>
-              — Sravani & Chandu
+              — Sravani
             </p>
           </div>
         </div>
@@ -85,7 +83,7 @@ export default function Gallery() {
           gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
           gap: '1.5rem',
         }}>
-          {galleryItems.map((item, i) => (
+          {galleryItems.map((item) => (
             <div key={item.title} style={{
               padding: '2rem',
               border: '1px solid rgba(201,168,76,0.1)',
@@ -131,7 +129,6 @@ export default function Gallery() {
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-            {/* QR Code */}
             <div style={{ textAlign: 'center' }}>
               <img
                 src="/qrcode.jpg"
@@ -148,7 +145,6 @@ export default function Gallery() {
               </p>
             </div>
 
-            {/* Instagram button */}
             <div style={{ textAlign: 'center' }}>
               <p style={{ color: 'rgba(248,244,238,0.5)', fontSize: '0.85rem', marginBottom: '1rem' }}>or tap below</p>
               <a

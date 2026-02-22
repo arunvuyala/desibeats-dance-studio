@@ -99,7 +99,7 @@ export default function Hero() {
           fontFamily: "'Raleway', sans-serif",
           fontWeight: '600',
         }}>
-          Sravani & Chandu Present
+          By Sravani
         </div>
 
         <h1 style={{
@@ -138,7 +138,7 @@ export default function Hero() {
           fontWeight: '300',
           lineHeight: 1.8,
         }}>
-          Bollywood & Indian Classical Dance classes for all ages — igniting passion, culture, and rhythm in Leander, TX
+          Bollywood, Tollywood & Fitness Dance classes for all ages — igniting passion, culture, and rhythm in Leander, TX
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

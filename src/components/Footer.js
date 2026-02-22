@@ -29,7 +29,7 @@ export default function Footer() {
               backgroundClip: 'text',
               marginBottom: '0.25rem',
             }}>DesiBeats</div>
-            <div style={{ color: '#9a9aaa', fontSize: '0.75rem', letterSpacing: '3px', textTransform: 'uppercase' }}>Dance Studio • Sravani & Chandu</div>
+            <div style={{ color: '#9a9aaa', fontSize: '0.75rem', letterSpacing: '3px', textTransform: 'uppercase' }}>Dance Studio • By Sravani</div>
           </div>
 
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>

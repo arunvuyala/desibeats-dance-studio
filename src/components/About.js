@@ -76,7 +76,6 @@ export default function About() {
       }} />
 
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-        {/* Section label */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }} ref={ref}>
           <span style={{
             fontSize: '0.7rem',
@@ -106,11 +105,10 @@ export default function About() {
             lineHeight: 1.9,
             fontWeight: '300',
           }}>
-            DesiBeats Dance Studio, founded by Sravani & Chandu, is a vibrant celebration of Indian dance culture in the heart of Leander, Texas. We believe dance is more than movement — it's a language that connects generations, preserves heritage, and transforms lives.
+            DesiBeats Dance Studio, founded by Sravani, is a vibrant celebration of Indian dance culture in the heart of Leander, Texas. We believe dance is more than movement — it's a language that connects generations, preserves heritage, and transforms lives.
           </p>
         </div>
 
-        {/* Stats */}
         <div ref={ref2} style={{
           display: 'flex',
           gap: '1.5rem',
@@ -119,20 +117,19 @@ export default function About() {
           marginBottom: '4rem',
         }}>
           <StatCard number="4+" label="Ages Welcome" />
-          <StatCard number="3" label="Skill Levels" />
+          <StatCard number="4" label="Class Styles" />
           <StatCard number="100+" label="Happy Students" />
           <StatCard number="∞" label="Memories Made" />
         </div>
 
-        {/* Philosophy cards */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '1.5rem',
         }}>
           {[
-            { icon: '💃', title: 'Expert Instructors', desc: 'Sravani & Chandu bring years of professional training and performance experience to every class.' },
-            { icon: '🎵', title: 'Cultural Immersion', desc: 'Dive deep into Bollywood, Bharatanatyam, Folk, and Fusion styles that celebrate our rich heritage.' },
+            { icon: '💃', title: 'Expert Instructor', desc: 'Sravani brings years of professional training and performance experience to every class.' },
+            { icon: '🎵', title: 'Cultural Immersion', desc: 'Dive deep into Bollywood, Tollywood, Folk, and Fusion styles that celebrate our rich heritage.' },
             { icon: '✨', title: 'All Are Welcome', desc: 'From toddlers to adults, beginners to advanced — every dancer finds their place at DesiBeats.' },
           ].map(card => (
             <div key={card.title} style={{

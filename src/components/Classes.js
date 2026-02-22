@@ -14,16 +14,24 @@ const classes = [
     ageRange: 'Ages 8–12',
     badge: '🌟',
     color: '#38b2c8',
-    description: 'Pre-teens dive deeper into technique and choreography, exploring diverse Indian dance styles with energy and enthusiasm.',
-    includes: ['Bollywood technique', 'Folk dance introduction', 'Group choreography', 'Stage performance prep'],
+    description: 'Pre-teens dive deeper into technique and choreography, exploring Bollywood and Tollywood dance styles with energy and enthusiasm.',
+    includes: ['Bollywood & Tollywood technique', 'Folk dance introduction', 'Group choreography', 'Stage performance prep'],
   },
   {
     level: 'Teens & Adults',
     ageRange: 'Ages 13+',
     badge: '💫',
     color: '#9b7fe8',
-    description: 'From classical to contemporary fusion, our senior classes offer a rich, fulfilling dance experience with performance opportunities.',
-    includes: ['Bollywood & Fusion', 'Classical elements', 'Fitness & expression', 'Competition & showcase'],
+    description: 'From Bollywood to Tollywood fusion, our senior classes offer a rich, fulfilling dance experience with performance opportunities.',
+    includes: ['Bollywood & Tollywood Fusion', 'Folk & contemporary styles', 'Fitness & expression', 'Competition & showcase'],
+  },
+  {
+    level: 'Bolly Beats for Fitness',
+    ageRange: 'All Ages',
+    badge: '🔥',
+    color: '#e87f7f',
+    description: 'A high-energy Bollywood-inspired fitness class that combines dance with cardio — burn calories, have fun, and feel amazing all at once!',
+    includes: ['Bollywood cardio routines', 'Full-body workout', 'No experience needed', 'Fun group energy'],
   },
 ];
 
@@ -107,7 +115,6 @@ export default function Classes() {
               background: 'rgba(255,255,255,0.02)',
               transition: 'all 0.4s ease',
               overflow: 'hidden',
-              animationDelay: `${i * 0.15}s`,
             }}
             onMouseEnter={e => {
               e.currentTarget.style.borderColor = cls.color + '70';
@@ -122,7 +129,6 @@ export default function Classes() {
               e.currentTarget.style.boxShadow = 'none';
             }}
             >
-              {/* Top accent bar */}
               <div style={{
                 position: 'absolute',
                 top: 0,
