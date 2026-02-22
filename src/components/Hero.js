@@ -83,28 +83,12 @@ export default function Hero() {
             src="/logo.jpg"
             alt="DesiBeats Logo"
             style={{
-              height: '160px',
+              height: '200px',
               width: 'auto',
               filter: 'drop-shadow(0 0 30px rgba(201,168,76,0.4))',
             }}
           />
         </div>
-
-        <h1 style={{
-          fontFamily: "'Cinzel Decorative', serif",
-          fontSize: 'clamp(3rem, 10vw, 7rem)',
-          fontWeight: '700',
-          lineHeight: 1.05,
-          background: 'linear-gradient(135deg, #c9a84c 0%, #f0d080 40%, #c9a84c 70%, #f0d080 100%)',
-          backgroundSize: '200% auto',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          animation: 'shimmer 4s linear infinite',
-          marginBottom: '0.5rem',
-        }}>
-          DesiBeats
-        </h1>
 
         <p style={{
           fontFamily: "'Raleway', sans-serif",
