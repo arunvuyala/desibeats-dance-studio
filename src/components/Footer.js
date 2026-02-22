@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer style={{
-      padding: '3rem 2rem',
+      padding: '2.5rem 2rem',
       background: '#060609',
       borderTop: '1px solid rgba(201,168,76,0.15)',
     }}>

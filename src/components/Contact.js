@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <section id="contact" style={{
-      padding: '8rem 2rem',
+      padding: '5rem 2rem',
       background: 'linear-gradient(180deg, #0d0d1a, #0a0a0f)',
       position: 'relative',
     }}>

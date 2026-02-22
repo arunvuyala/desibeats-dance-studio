@@ -8,6 +8,10 @@ const classes = [
     color: '#c9a84c',
     description: 'Our youngest dancers discover the joy of movement through playful Bollywood routines and cultural storytelling. Focus on coordination, rhythm, and fun!',
     includes: ['Basic Bollywood moves', 'Rhythm & coordination', 'Fun & confidence building', 'Annual showcase performance'],
+    schedule: [
+      { day: 'Monday', time: '5:30 – 6:30 pm', status: 'full' },
+      { day: 'Thursday', time: '5:30 – 6:30 pm', status: 'open' },
+    ],
   },
   {
     level: 'Pre-Teens',
@@ -16,6 +20,10 @@ const classes = [
     color: '#38b2c8',
     description: 'Pre-teens dive deeper into technique and choreography, exploring Bollywood and Tollywood dance styles with energy and enthusiasm.',
     includes: ['Bollywood & Tollywood technique', 'Folk dance introduction', 'Group choreography', 'Stage performance prep'],
+    schedule: [
+      { day: 'Friday', time: '5:00 – 6:00 pm', status: 'full' },
+      { day: 'Friday', time: '6:00 – 7:00 pm', status: 'open' },
+    ],
   },
   {
     level: 'Teens & Adults',
@@ -24,6 +32,9 @@ const classes = [
     color: '#9b7fe8',
     description: 'From Bollywood to Tollywood fusion, our senior classes offer a rich, fulfilling dance experience with performance opportunities.',
     includes: ['Bollywood & Tollywood Fusion', 'Folk & contemporary styles', 'Fitness & expression', 'Competition & showcase'],
+    schedule: [
+      { day: 'Saturday', time: '10:00 – 11:00 am', status: 'open' },
+    ],
   },
   {
     level: 'Bolly Beats for Fitness',
@@ -32,6 +43,9 @@ const classes = [
     color: '#e87f7f',
     description: 'A high-energy Bollywood-inspired fitness class that combines dance with cardio — burn calories, have fun, and feel amazing all at once!',
     includes: ['Bollywood cardio routines', 'Full-body workout', 'No experience needed', 'Fun group energy'],
+    schedule: [
+      { day: 'Coming Soon', time: '', status: 'soon' },
+    ],
   },
 ];
 
@@ -59,39 +73,27 @@ export default function Classes() {
 
   return (
     <section id="classes" style={{
-      padding: '8rem 2rem 0',
+      padding: '5rem 2rem',
       background: 'linear-gradient(180deg, #0d0d1a, #111125)',
       position: 'relative',
     }}>
       <div style={{
-        position: 'absolute',
-        bottom: '20%',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '500px',
-        height: '500px',
+        position: 'absolute', bottom: '20%', left: '50%', transform: 'translateX(-50%)',
+        width: '500px', height: '500px',
         background: 'radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }} ref={ref}>
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }} ref={ref}>
           <span style={{
-            fontSize: '0.7rem',
-            letterSpacing: '6px',
-            color: '#38b2c8',
-            textTransform: 'uppercase',
-            fontWeight: '600',
-            display: 'block',
-            marginBottom: '1rem',
+            fontSize: '0.7rem', letterSpacing: '6px', color: '#38b2c8',
+            textTransform: 'uppercase', fontWeight: '600', display: 'block', marginBottom: '1rem',
           }}>What We Offer</span>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            fontWeight: '700',
-            color: '#f8f4ee',
-            lineHeight: 1.2,
-            marginBottom: '1rem',
+            fontWeight: '700', color: '#f8f4ee', lineHeight: 1.2, marginBottom: '1rem',
           }}>
             Classes for <em style={{ color: '#c9a84c' }}>Every</em> Dancer
           </h2>
@@ -106,7 +108,7 @@ export default function Classes() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem',
         }}>
-          {classes.map((cls, i) => (
+          {classes.map((cls) => (
             <div key={cls.level} style={{
               position: 'relative',
               padding: '2.5rem',
@@ -115,6 +117,8 @@ export default function Classes() {
               background: 'rgba(255,255,255,0.02)',
               transition: 'all 0.4s ease',
               overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.borderColor = cls.color + '70';
@@ -129,54 +133,39 @@ export default function Classes() {
               e.currentTarget.style.boxShadow = 'none';
             }}
             >
+              {/* Top accent bar */}
               <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '3px',
+                position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
                 background: `linear-gradient(90deg, transparent, ${cls.color}, transparent)`,
               }} />
 
+              {/* Header */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <span style={{ fontSize: '2.5rem' }}>{cls.badge}</span>
                 <div>
                   <h3 style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: '1.5rem',
-                    color: '#f8f4ee',
-                    fontWeight: '700',
-                    lineHeight: 1.1,
+                    fontFamily: "'Playfair Display', serif", fontSize: '1.5rem',
+                    color: '#f8f4ee', fontWeight: '700', lineHeight: 1.1,
                   }}>{cls.level}</h3>
                   <span style={{
-                    background: cls.color + '25',
-                    color: cls.color,
-                    fontSize: '0.7rem',
-                    letterSpacing: '2px',
-                    padding: '3px 10px',
-                    borderRadius: '2px',
-                    fontWeight: '700',
-                    textTransform: 'uppercase',
+                    background: cls.color + '25', color: cls.color,
+                    fontSize: '0.7rem', letterSpacing: '2px', padding: '3px 10px',
+                    borderRadius: '2px', fontWeight: '700', textTransform: 'uppercase',
                   }}>{cls.ageRange}</span>
                 </div>
               </div>
 
               <p style={{
-                color: 'rgba(248,244,238,0.65)',
-                lineHeight: 1.8,
-                fontSize: '0.95rem',
-                marginBottom: '1.5rem',
-                fontWeight: '300',
+                color: 'rgba(248,244,238,0.65)', lineHeight: 1.8,
+                fontSize: '0.95rem', marginBottom: '1.5rem', fontWeight: '300',
               }}>{cls.description}</p>
 
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              {/* Includes */}
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
                 {cls.includes.map(item => (
                   <li key={item} style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.75rem',
-                    color: 'rgba(248,244,238,0.75)',
-                    fontSize: '0.88rem',
+                    display: 'flex', alignItems: 'center', gap: '0.75rem',
+                    color: 'rgba(248,244,238,0.75)', fontSize: '0.88rem',
                   }}>
                     <span style={{ color: cls.color, fontSize: '0.7rem' }}>◆</span>
                     {item}
@@ -184,20 +173,51 @@ export default function Classes() {
                 ))}
               </ul>
 
+              {/* Schedule */}
+              <div style={{
+                marginTop: 'auto',
+                borderTop: `1px solid ${cls.color}25`,
+                paddingTop: '1.25rem',
+              }}>
+                <div style={{
+                  fontSize: '0.65rem', letterSpacing: '2px', textTransform: 'uppercase',
+                  color: cls.color, fontWeight: '700', marginBottom: '0.75rem',
+                }}>🕐 Schedule</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  {cls.schedule.map((slot, i) => (
+                    <div key={i} style={{
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '0.6rem 0.85rem',
+                      borderRadius: '3px',
+                      background: slot.status === 'soon'
+                        ? 'rgba(255,255,255,0.03)'
+                        : slot.status === 'open'
+                          ? 'rgba(56,210,120,0.08)'
+                          : 'rgba(255,80,80,0.08)',
+                      border: `1px solid ${slot.status === 'soon' ? 'rgba(255,255,255,0.08)' : slot.status === 'open' ? 'rgba(56,210,120,0.2)' : 'rgba(255,80,80,0.2)'}`,
+                    }}>
+                      <div>
+                        <span style={{ color: '#f8f4ee', fontSize: '0.82rem', fontWeight: '600' }}>{slot.day}</span>
+                        {slot.time && <span style={{ color: 'rgba(248,244,238,0.5)', fontSize: '0.78rem', marginLeft: '0.5rem' }}>{slot.time}</span>}
+                      </div>
+                      <span style={{
+                        fontSize: '0.65rem', fontWeight: '700', letterSpacing: '1px',
+                        textTransform: 'uppercase', padding: '2px 8px', borderRadius: '2px',
+                        color: slot.status === 'soon' ? '#9a9aaa' : slot.status === 'open' ? '#38d278' : '#ff6b6b',
+                        background: slot.status === 'soon' ? 'rgba(154,154,170,0.1)' : slot.status === 'open' ? 'rgba(56,210,120,0.15)' : 'rgba(255,80,80,0.15)',
+                      }}>
+                        {slot.status === 'soon' ? 'Coming Soon' : slot.status === 'open' ? 'Available' : 'No Availability'}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <a href="#contact" style={{
-                display: 'block',
-                marginTop: '2rem',
-                padding: '12px',
-                textAlign: 'center',
-                border: `1px solid ${cls.color}50`,
-                borderRadius: '2px',
-                color: cls.color,
-                fontSize: '0.8rem',
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                fontWeight: '700',
-                textDecoration: 'none',
-                transition: 'all 0.2s',
+                display: 'block', marginTop: '1.5rem', padding: '12px', textAlign: 'center',
+                border: `1px solid ${cls.color}50`, borderRadius: '2px', color: cls.color,
+                fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase',
+                fontWeight: '700', textDecoration: 'none', transition: 'all 0.2s',
               }}
               onMouseEnter={e => { e.target.style.background = cls.color; e.target.style.color = '#0a0a0f'; }}
               onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = cls.color; }}

@@ -7,6 +7,7 @@ const photos = [
   { src: '/media/IMG_3348_Original.jpeg', caption: 'Class Vibes', desc: 'Fun times at the studio with Sravani' },
   { src: '/media/20260110_005054828_iOS.jpeg', caption: 'Dance Class', desc: 'Learning and growing together' },
   { src: '/media/IMG_5959_Original.jpeg', caption: 'Behind the Scenes', desc: 'Candid moments from practice' },
+  { src: '/media/images.jpg', caption: 'Little Stars Class', desc: 'Energy and smiles at the studio' },
 ];
 
 export default function Gallery() {
@@ -14,7 +15,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" style={{
-      padding: '0 2rem 8rem',
+      padding: '0 2rem 5rem',
       background: 'linear-gradient(180deg, #111125, #0d0d1a)',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
