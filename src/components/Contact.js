@@ -3,12 +3,24 @@ import React, { useState } from 'react';
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', age: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = e => {
     e.preventDefault();
-    setSubmitted(true);
+    const encoded = new URLSearchParams({
+      'form-name': 'enrollment',
+      ...form,
+    }).toString();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encoded,
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => setError(true));
   };
 
   const inputStyle = {
@@ -40,6 +52,15 @@ export default function Contact() {
         background: 'radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
+
+      {/* Hidden Netlify form for detection at build time */}
+      <form name="enrollment" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="age"><option>placeholder</option></select>
+        <textarea name="message"></textarea>
+      </form>
 
       <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
@@ -134,10 +155,32 @@ export default function Contact() {
               }}>
                 <div style={{ fontSize: '4rem', marginBottom: '1rem', animation: 'float 3s ease-in-out infinite' }}>🎊</div>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', color: '#f8f4ee', marginBottom: '1rem' }}>Welcome to DesiBeats!</h3>
-                <p style={{ color: 'rgba(248,244,238,0.65)', lineHeight: 1.7 }}>We'll be in touch soon to get you started on your dance journey!</p>
+                <p style={{ color: 'rgba(248,244,238,0.65)', lineHeight: 1.7 }}>Your enrollment request has been sent! We'll be in touch soon to get you started on your dance journey.</p>
+              </div>
+            ) : error ? (
+              <div style={{
+                textAlign: 'center',
+                padding: '3rem 2rem',
+                border: '1px solid rgba(255,80,80,0.3)',
+                borderRadius: '8px',
+                background: 'rgba(255,80,80,0.05)',
+              }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>😔</div>
+                <p style={{ color: 'rgba(248,244,238,0.7)', lineHeight: 1.7 }}>Something went wrong. Please call us directly at <strong style={{ color: '#c9a84c' }}>(818) 406-1270</strong> or DM us on Instagram.</p>
+                <button onClick={() => setError(false)} style={{ marginTop: '1.5rem', background: 'none', border: '1px solid rgba(201,168,76,0.4)', color: '#c9a84c', padding: '10px 24px', cursor: 'pointer', borderRadius: '3px', fontFamily: "'Raleway', sans-serif", letterSpacing: '1px' }}>Try Again</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <form
+                onSubmit={handleSubmit}
+                name="enrollment"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}
+              >
+                {/* Hidden fields required by Netlify */}
+                <input type="hidden" name="form-name" value="enrollment" />
+                <input type="hidden" name="bot-field" />
+
                 <h3 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontSize: '1.6rem',
