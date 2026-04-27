@@ -99,7 +99,7 @@ export default function Hero() {
           fontWeight: '300',
           lineHeight: 1.8,
         }}>
-          Bollywood, Tollywood & Fitness Dance classes for all ages — igniting passion, culture, and rhythm in Leander, TX
+          Bollywood, Hip hop & Fitness Dance classes for all ages — igniting passion, culture, and rhythm in Leander, TX
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
