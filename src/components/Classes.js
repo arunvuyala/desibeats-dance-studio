@@ -193,7 +193,7 @@ export default function Classes() {
                     borderRadius: '3px', padding: '4px 12px',
                     display: 'flex', alignItems: 'baseline', gap: '3px',
                   }}>
-                    <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: '700', color: cls.color }}>$60</span>
+                    <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: '700', color: cls.color }}>$50</span>
                     <span style={{ fontSize: '0.65rem', color: 'rgba(248,244,238,0.5)', letterSpacing: '1px' }}>/month</span>
                   </div>
                 </div>
