@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
 const photos = [
-  { src: '/media/IMG_4914_Original.jpeg', caption: 'Festival Performance', desc: 'Students performing at a community festival' },
-  { src: '/media/IMG_8482_Original.jpeg', caption: 'Showcase Day', desc: 'Colorful lehengas, big smiles!' },
-  { src: '/media/IMG_8478_Original.jpeg', caption: 'Performance Ready', desc: 'All dressed up and ready to shine' },
-  { src: '/media/IMG_3348_Original.jpeg', caption: 'Class Vibes', desc: 'Fun times at the studio with Sravani' },
-  { src: '/media/20260110_005054828_iOS.jpeg', caption: 'Dance Class', desc: 'Learning and growing together' },
-  { src: '/media/IMG_5959_Original.jpeg', caption: 'Behind the Scenes', desc: 'Candid moments from practice' },
-  { src: '/media/images.jpg', caption: 'Little Stars Class', desc: 'Energy and smiles at the studio' },
+  { src: '/media/Photoroom_20260426_185600.jpeg', caption: 'Studio Family', desc: 'Fun times at the studio with Shravani' },
+  { src: '/media/Photoroom_20260426_185711.jpeg', caption: 'Little Stars', desc: 'Our youngest dancers striking a pose!' },
+  { src: '/media/IMG_2034.webp', caption: 'Stage Stars', desc: 'Owning the stage in matching purple' },
+  { src: '/media/IMG_2035.jpeg', caption: 'Red Hot Crew', desc: 'Bold moves, bold outfits, big energy' },
+  { src: '/media/IMG_2036.jpeg', caption: 'Hair Flip Moment', desc: 'Catching air and living for the spotlight' },
+  { src: '/media/IMG_2037.jpeg', caption: 'Freestyle Session', desc: 'Breaking it down at the studio' },
 ];
 
 export default function Gallery() {
@@ -117,9 +116,9 @@ export default function Gallery() {
             <video
               controls
               style={{ width: '100%', display: 'block', maxHeight: '500px' }}
-              poster="/media/IMG_4914_Original.jpeg"
+              poster="/media/IMG_2034.webp"
             >
-              <source src="/media/df74ca47121c443086c35f55451f18bc.mov" type="video/mp4" />
+              <source src="/media/df74ca47121c443086c35f55451f1899.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
